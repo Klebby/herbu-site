@@ -124,10 +124,11 @@ section{padding:96px 0;border-top:1px solid var(--line)}
 .steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:18px;font-family:var(--serif);font-size:1.9rem;color:var(--accent)}
 .steps strong{display:block;font-weight:500;font-size:1.02rem;margin-bottom:2px}
 .steps span{color:var(--muted);font-size:.93rem}
-.ideas{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+.ideas{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0 0 26px}
 .ideas-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:24px 0 10px;font-weight:500}
 .intro .btn{margin-top:8px}
-.ideas span{border:1px solid var(--line);padding:6px 14px;font-size:.82rem;color:var(--muted)}
+.ideas span{display:inline-flex;align-items:center;gap:9px;font-size:.95rem;color:var(--text)}
+.ideas span::before{content:"";width:5px;height:5px;background:var(--accent);transform:rotate(45deg);flex:none}
 @media(max-width:860px){.comm{grid-template-columns:1fr;gap:40px}}
 
 /* contact */
