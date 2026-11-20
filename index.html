@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herbu — Sculpture</title>
+<meta name="description" content="Hand-carved sculpture by Herbu. Portrait busts, bookends, and custom commissions in marble, stone, wood, or 3D print.">
+<meta property="og:title" content="Herbu — Sculpture">
+<meta property="og:description" content="Hand-carved sculpture in any medium. Bookends available. Open for custom commissions.">
+<meta property="og:image" content="https://herbu.art/img/share.jpg">
+<meta property="og:url" content="https://herbu.art/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f0f10">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f0f10; --bg2:#161618; --line:#2a2a2d; --text:#ece8e1; --muted:#a19d96;
+  --accent:#c9a96e; --accent-2:#e2c995; --ok:#8fbf8a; --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:Inter,system-ui,-apple-system,"Segoe UI",sans-serif; --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-weight:300;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0}
+.eyebrow{font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:500}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(15,15,16,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--serif);font-size:1.6rem;letter-spacing:.32em;text-decoration:none;font-weight:600}
+nav a{text-decoration:none;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-left:28px;transition:color .2s}
+nav a:hover{color:var(--text)}
+@media(max-width:640px){nav a{margin-left:16px;font-size:.72rem;letter-spacing:.1em} .logo{font-size:1.3rem}}
+@media(max-width:400px){nav a.hide-sm{display:none}}
+
+/* buttons */
+.btn{display:inline-block;padding:14px 26px;border:1px solid var(--accent);color:var(--bg);background:var(--accent);text-decoration:none;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;transition:all .2s;cursor:pointer}
+.btn:hover{background:var(--accent-2);border-color:var(--accent-2)}
+.btn.ghost{background:transparent;color:var(--text);border-color:#55524c}
+.btn.ghost:hover{border-color:var(--text)}
+
+/* hero */
+.hero{padding:72px 0 88px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.hero h1{font-size:clamp(2.8rem,6vw,5rem);margin:18px 0 22px}
+.hero h1 em{color:var(--accent);font-style:italic}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:30em;margin:0 0 34px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero figure{margin:0;position:relative}
+.hero figure img{width:100%;max-height:82vh;object-fit:cover;object-position:center top;border:1px solid var(--line)}
+.hero figcaption{font-size:.78rem;color:var(--muted);margin-top:10px;letter-spacing:.04em}
+@media(max-width:860px){.hero{padding:40px 0 64px}.hero .wrap{grid-template-columns:1fr;gap:40px}.hero figure img{max-height:70vh}}
+
+/* sections */
+section{padding:96px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin-top:10px}
+.sec-head p{color:var(--muted);max-width:28em;margin:0}
+
+/* works */
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.work{background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column}
+.work button.thumb{all:unset;cursor:zoom-in;display:block;position:relative;overflow:hidden;aspect-ratio:4/5;background:#000}
+.work button.thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.work button.thumb:hover img{transform:scale(1.04)}
+.work button.thumb:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.count{position:absolute;right:12px;bottom:12px;background:rgba(0,0,0,.65);font-size:.72rem;letter-spacing:.1em;padding:5px 10px}
+.work .body{padding:26px 26px 30px;display:flex;flex-direction:column;flex:1}
+.status{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:500;display:inline-flex;align-items:center;gap:8px;margin-bottom:14px}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.status.avail{color:var(--ok)} .status.private{color:var(--muted)}
+.work h3{font-size:1.9rem;margin-bottom:6px}
+.work .medium{color:var(--accent);font-size:.86rem;letter-spacing:.04em;margin-bottom:14px}
+.work p{color:var(--muted);font-size:.95rem;margin:0 0 22px;flex:1}
+.work .actions{display:flex;gap:10px;flex-wrap:wrap}
+.work .actions .btn{padding:11px 18px;font-size:.72rem}
+.works.four{grid-template-columns:repeat(4,1fr);gap:22px}
+.works.four .work h3{font-size:1.55rem}
+.works.four .work .body{padding:22px 22px 26px}
+@media(max-width:980px){.works,.works.four{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.works,.works.four{grid-template-columns:1fr}}
+
+/* display feature */
+.feature{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.feature img{border:1px solid var(--line)}
+.feature h2{font-size:clamp(2rem,4vw,3rem);margin:10px 0 20px}
+.feature p{color:var(--muted)}
+@media(max-width:860px){.feature{grid-template-columns:1fr}}
+
+/* process strip */
+.strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.strip button{all:unset;cursor:zoom-in;aspect-ratio:1;overflow:hidden;background:#000}
+.strip img{width:100%;height:100%;object-fit:cover;filter:grayscale(.25);transition:filter .3s,transform .5s}
+.strip button:hover img{filter:none;transform:scale(1.05)}
+@media(max-width:760px){.strip{grid-template-columns:repeat(3,1fr)}}
+
+/* commissions */
+.comm{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.comm h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin:10px 0 22px}
+.comm .intro p{color:var(--muted);font-size:1.05rem}
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;padding:22px 0 22px 64px;border-bottom:1px solid var(--line);position:relative}
+.steps li:first-child{border-top:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:18px;font-family:var(--serif);font-size:1.9rem;color:var(--accent)}
+.steps strong{display:block;font-weight:500;font-size:1.02rem;margin-bottom:2px}
+.steps span{color:var(--muted);font-size:.93rem}
+.ideas{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+.ideas-label{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:24px 0 10px;font-weight:500}
+.intro .btn{margin-top:8px}
+.ideas span{border:1px solid var(--line);padding:6px 14px;font-size:.82rem;color:var(--muted)}
+@media(max-width:860px){.comm{grid-template-columns:1fr;gap:40px}}
+
+/* contact */
+.contact{text-align:center}
+.contact h2{font-size:clamp(2.4rem,5vw,4rem);margin:12px 0 18px}
+.contact p{color:var(--muted);max-width:34em;margin:0 auto 34px}
+.contact .mail{display:inline-block;font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--accent);text-decoration:none;border-bottom:1px solid transparent;margin-bottom:34px}
+.contact .mail:hover{border-color:var(--accent)}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#6e6a64;font-size:.8rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(5,5,6,.96);z-index:100;display:none;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb img{max-width:92vw;max-height:84vh;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.lb .cap{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:var(--muted);font-size:.85rem;letter-spacing:.06em}
+.lb button{all:unset;cursor:pointer;position:absolute;color:var(--text);font-size:2.2rem;width:56px;height:56px;display:flex;align-items:center;justify-content:center;opacity:.75;transition:opacity .2s}
+.lb button:hover,.lb button:focus-visible{opacity:1}
+.lb .x{top:10px;right:10px;font-size:1.8rem}
+.lb .prev{left:8px;top:50%;transform:translateY(-50%)}
+.lb .next{right:8px;top:50%;transform:translateY(-50%)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Herbu home">HERBU</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#commissions">Commissions</a>
+      <a href="#contact" class="hide-sm">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Sculpture Studio</div>
+        <h1>Carved by hand,<br>in <em>any medium.</em></h1>
+        <p class="lead">Herbu is a sculptor working in marble, stone, wood, and more — portrait busts, functional art, and one-of-a-kind commissions, made in whatever medium suits the piece.</p>
+        <div class="ctas">
+          <a class="btn" href="#work">View the work</a>
+          <a class="btn ghost" href="#commissions">Commission a piece</a>
+        </div>
+      </div>
+      <figure>
+        <img src="img/display-sm.jpg" srcset="img/display-sm.jpg 441w, img/display.jpg 990w" sizes="(max-width:860px) 92vw, 520px" alt="Marble bust 'Kataluna' displayed atop a tall tower of stacked books, with a Yule Marble skull bookend and an Ocean Jasper skull bookend set into the stack" width="441" height="800">
+        <figcaption>Exhibition display — a collection of works.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="eyebrow">Selected Works</div>
+          <h2>The Collection</h2>
+        </div>
+        <p>Tap any image to see more angles. The bookends are available now; the bust remains in the artist's private collection.</p>
+      </div>
+
+      <div class="works">
+        <article class="work reveal">
+          <button class="thumb" data-gallery="kataluna" aria-label="Open Kataluna photo gallery">
+            <img src="img/kataluna-1-sm.jpg" alt="Yule Marble portrait bust of a smiling woman with braided hair, three-quarter view" loading="lazy" width="600" height="800">
+            <span class="count">6 photos</span>
+          </button>
+          <div class="body">
+            <span class="status private">Private collection · Not for sale</span>
+            <h3>Kataluna</h3>
+            <div class="medium">Yule Marble · Portrait bust</div>
+            <p>A portrait of the artist's wife, carved from a single block of Yule Marble and finished with an inset agate cabochon set into her carved necklace.</p>
+            <div class="actions"><a class="btn ghost" href="#commissions">Commission a portrait</a></div>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <button class="thumb" data-gallery="marble" aria-label="Open marble skull bookend photo gallery">
+            <img src="img/marble-skull-3-sm.jpg" alt="Yule Marble half-skull bookend, three-quarter view" loading="lazy" width="600" height="800">
+            <span class="count">4 photos</span>
+          </button>
+          <div class="body">
+            <span class="status avail">Available</span>
+            <h3>Marble Skull Bookend</h3>
+            <div class="medium">Yule Marble · Bookend</div>
+            <p>An anatomical skull carved in Yule Marble and split down the profile, so its flat back stands flush against a row of books. Heavy, stable, and polished smooth.</p>
+            <div class="actions"><a class="btn" href="mailto:studio@herbu.art?subject=Marble%20Skull%20Bookend%20inquiry">Inquire</a></div>
+          </div>
+        </article>
+
+        <article class="work reveal">
+          <button class="thumb" data-gallery="jasper" aria-label="Open Ocean Jasper skull bookend photo gallery">
+            <img src="img/jasper-skull-1-sm.jpg" alt="Ocean Jasper skull bookend showing grey, red and ochre mineral patterns" loading="lazy" width="601" height="800">
+            <span class="count">4 photos</span>
+          </button>
+          <div class="body">
+            <span class="status avail">Available</span>
+            <h3>Ocean Jasper Skull Bookend</h3>
+            <div class="medium">Ocean Jasper · Bookend</div>
+            <p>The marble skull's counterpart, carved from Ocean Jasper. Natural crystal pockets, red and ochre veining, and a raw druzy crown make every surface unique.</p>
+            <div class="actions"><a class="btn" href="mailto:studio@herbu.art?subject=Ocean%20Jasper%20Skull%20Bookend%20inquiry">Inquire</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="range">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="eyebrow">Beyond Stone</div>
+          <h2>Commissioned Work</h2>
+        </div>
+        <p>A selection of private commissions: scanned, printed, painted, and carved in wood. Tap any image to see more.</p>
+      </div>
+      <div class="works four">
+        <article class="work reveal">
+          <button class="thumb" data-gallery="balloon" aria-label="Open balloon dog photo">
+            <img src="img/balloon-dog-1-sm.jpg" alt="Glossy violet balloon-dog sculpture" loading="lazy" width="640" height="800">
+          </button>
+          <div class="body">
+            <span class="status private">Private commission</span>
+            <h3>Balloon Dog</h3>
+            <div class="medium">3D printed · Hand painted</div>
+            <p>A playful balloon-dog sculpture, 3D printed and hand-painted in glossy violet for a private client.</p>
+          </div>
+        </article>
+        <article class="work reveal">
+          <button class="thumb" data-gallery="busts" aria-label="Open portrait bust photos">
+            <img src="img/kevin-bust-1-sm.jpg" alt="White 3D-printed portrait bust of a smiling man" loading="lazy" width="640" height="800">
+            <span class="count">2 photos</span>
+          </button>
+          <div class="body">
+            <span class="status private">Private commission</span>
+            <h3>Portrait Busts</h3>
+            <div class="medium">3D scanned · 3D printed</div>
+            <p>The client was 3D scanned, and his likeness was refined and printed as portrait busts in several sizes.</p>
+          </div>
+        </article>
+        <article class="work reveal">
+          <button class="thumb" data-gallery="awards" aria-label="Open award statuette photos">
+            <img src="img/award-1-sm.jpg" alt="Gold award statuette with a custom portrait head on a black base" loading="lazy" width="640" height="800">
+            <span class="count">2 photos</span>
+          </button>
+          <div class="body">
+            <span class="status private">Private commission</span>
+            <h3>Custom Award Statuettes</h3>
+            <div class="medium">3D scanned · 3D printed</div>
+            <p>Gold award statuettes topped with the client's own scanned likeness, made as one-of-a-kind gifts.</p>
+          </div>
+        </article>
+        <article class="work reveal">
+          <button class="thumb" data-gallery="shoe" aria-label="Open shoe-cleaning stand photo">
+            <img src="img/shoe-stand-1-sm.jpg" alt="Carved shoe-cleaning stand in walnut, eucalyptus and rosewood, with a small bee inlay" loading="lazy" width="640" height="800">
+          </button>
+          <div class="body">
+            <span class="status private">Private commission</span>
+            <h3>Shoe-Cleaning Stand</h3>
+            <div class="medium">Walnut, eucalyptus &amp; rosewood · Hand carved</div>
+            <p>A child's shoe-cleaning stand carved in walnut, eucalyptus, and rosewood for a Montessori teacher's classroom, finished with a small bee inlay.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="eyebrow">The Process</div>
+          <h2>From Raw Block to Finished Piece</h2>
+        </div>
+        <p>A few moments from the studio, as rough stone is shaped into sculpture.</p>
+      </div>
+      <div class="strip reveal">
+        <button data-gallery="process" data-index="0" aria-label="Process photo 1"><img src="img/process-1-sm.jpg" alt="Rough marble block mounted for carving" loading="lazy"></button>
+        <button data-gallery="process" data-index="1" aria-label="Process photo 2"><img src="img/process-2-sm.jpg" alt="Bust roughed out in marble" loading="lazy"></button>
+        <button data-gallery="process" data-index="2" aria-label="Process photo 3"><img src="img/process-3-sm.jpg" alt="Bust face emerging from the stone" loading="lazy"></button>
+        <button data-gallery="process" data-index="3" aria-label="Process photo 4"><img src="img/process-4-sm.jpg" alt="Marble skull nearly finished in the studio" loading="lazy"></button>
+        <button data-gallery="process" data-index="4" aria-label="Process photo 5"><img src="img/process-5-sm.jpg" alt="Ocean Jasper being roughed into a skull" loading="lazy"></button>
+        <button data-gallery="process" data-index="5" aria-label="Process photo 6"><img src="img/process-6-sm.jpg" alt="Ocean Jasper skull under the carving tools" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="commissions">
+    <div class="wrap comm">
+      <div class="intro reveal">
+        <div class="eyebrow">Now Accepting</div>
+        <h2>Custom Commissions</h2>
+        <p>Have something in mind? I make one-of-a-kind pieces to order — a portrait of someone you love, a memorial, a gift, or a functional piece for your home — in the medium of your choice.</p>
+        <div class="ideas-label">Pieces</div>
+        <div class="ideas">
+          <span>Portrait busts</span><span>Memorial pieces</span><span>Bookends</span><span>Skulls &amp; anatomical</span><span>Pet portraits</span><span>Your idea</span>
+        </div>
+        <div class="ideas-label">Mediums</div>
+        <div class="ideas">
+          <span>Marble</span><span>Natural stone</span><span>Wood</span><span>3D printed</span><span>Other materials</span>
+        </div>
+        <a class="btn" href="mailto:studio@herbu.art?subject=Commission%20inquiry">Start a commission</a>
+      </div>
+      <ol class="steps reveal">
+        <li><strong>Reach out</strong><span>Email a short description of your idea, a rough size, and any reference photos.</span></li>
+        <li><strong>Consult &amp; quote</strong><span>We talk through medium, scale, and design. You get a clear quote and timeline before anything begins.</span></li>
+        <li><strong>Making</strong><span>Your piece is carved by hand — or sculpted digitally and 3D printed, if you prefer. I'll send progress photos along the way.</span></li>
+        <li><strong>Delivery</strong><span>Finished and carefully packed for pickup or shipping.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap reveal">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Let's make something lasting.</h2>
+      <p>Questions about available works, commissions or anything else — I'd love to hear from you.</p>
+      <a class="mail" href="mailto:studio@herbu.art">studio@herbu.art</a><br>
+      <a class="btn" href="mailto:studio@herbu.art?subject=Hello%20from%20herbu.art">Send an email</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Herbu · Sculpture</span>
+    <span>herbu.art</span>
+  </div>
+</footer>
+
+<div class="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="x" aria-label="Close">✕</button>
+  <button class="prev" aria-label="Previous photo">‹</button>
+  <img alt="">
+  <button class="next" aria-label="Next photo">›</button>
+  <div class="cap"></div>
+</div>
+
+<script>
+const G = {
+  kataluna: {t:"Kataluna — Yule Marble", n:["kataluna-1","kataluna-2","kataluna-3","kataluna-4","kataluna-5","kataluna-6"]},
+  marble:   {t:"Marble Skull Bookend", n:["marble-skull-3","marble-skull-1","marble-skull-2","marble-skull-4"]},
+  jasper:   {t:"Ocean Jasper Skull Bookend", n:["jasper-skull-1","jasper-skull-2","jasper-skull-3","jasper-skull-4"]},
+  balloon:  {t:"Balloon Dog — 3D printed, hand painted", n:["balloon-dog-1"]},
+  busts:    {t:"Portrait Busts — 3D scanned & printed", n:["kevin-bust-1","kevin-bust-2"]},
+  awards:   {t:"Custom Award Statuettes", n:["award-1","award-2"]},
+  shoe:     {t:"Shoe-Cleaning Stand — walnut, eucalyptus & rosewood", n:["shoe-stand-1"]},
+  process:  {t:"The Process", n:["process-1","process-2","process-3","process-4","process-5","process-6"]}
+};
+const lb=document.querySelector('.lb'), im=lb.querySelector('img'), cap=lb.querySelector('.cap');
+let cur=null, i=0, last=null;
+function show(){ const g=G[cur]; im.src='img/'+g.n[i]+'.jpg'; im.alt=g.t+' — photo '+(i+1); cap.textContent=g.t+'   ·   '+(i+1)+' / '+g.n.length;
+  const nx=new Image(); nx.src='img/'+g.n[(i+1)%g.n.length]+'.jpg'; }
+function open(g,k){ cur=g; i=k||0; last=document.activeElement; lb.classList.add('open'); document.body.style.overflow='hidden'; show(); lb.querySelector('.x').focus(); }
+function close(){ lb.classList.remove('open'); document.body.style.overflow=''; im.src=''; if(last) last.focus(); }
+function step(d){ const n=G[cur].n.length; i=(i+d+n)%n; show(); }
+document.querySelectorAll('[data-gallery]').forEach(b=>b.addEventListener('click',()=>open(b.dataset.gallery,+(b.dataset.index||0))));
+lb.querySelector('.x').onclick=close; lb.querySelector('.prev').onclick=()=>step(-1); lb.querySelector('.next').onclick=()=>step(1);
+lb.addEventListener('click',e=>{ if(e.target===lb) close(); });
+document.addEventListener('keydown',e=>{ if(!lb.classList.contains('open')) return;
+  if(e.key==='Escape') close(); else if(e.key==='ArrowRight') step(1); else if(e.key==='ArrowLeft') step(-1); });
+let sx=null; lb.addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});
+lb.addEventListener('touchend',e=>{ if(sx===null) return; const dx=e.changedTouches[0].clientX-sx; if(Math.abs(dx)>40) step(dx<0?1:-1); sx=null; });
+document.getElementById('yr').textContent=new Date().getFullYear();
+const io=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
