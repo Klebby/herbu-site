@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Herbu — Sculpture &amp; Portrait Busts by Kaleb Allen | Austin, TX</title>
-<meta name="description" content="Herbu is Austin, Texas sculptor Kaleb Allen. Hand-carved marble and stone, portrait busts, bookends, and custom commissions in stone, wood, or 3D print.">
+<meta name="description" content="Herbu is Austin, Texas sculptor Kaleb Allen. Hand-carved marble and stone, portrait busts, bookends, large-scale community-built art, and custom commissions in stone or 3D print.">
 <meta property="og:title" content="Herbu — Sculpture by Kaleb Allen">
 <meta property="og:description" content="Sculpture and portraits in any medium, from Austin, Texas. Bookends available. Open for custom commissions.">
 <meta property="og:image" content="https://herbu.art/img/share.jpg">
@@ -89,6 +89,7 @@ section{padding:96px 0;border-top:1px solid var(--line)}
 .work .actions{display:flex;gap:10px;flex-wrap:wrap}
 .work .actions .btn{padding:11px 18px;font-size:.72rem}
 .works.four{grid-template-columns:repeat(4,1fr);gap:22px}
+.works.four.two{grid-template-columns:repeat(2,1fr);gap:28px}
 .works.four .work h3{font-size:1.55rem}
 .works.four .work .body{padding:22px 22px 26px}
 @media(max-width:980px){.works,.works.four{grid-template-columns:1fr 1fr}}
@@ -192,6 +193,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <a class="logo" href="#top" aria-label="Herbu home">HERBU</a>
     <nav>
       <a href="#work">Work</a>
+      <a href="#large" class="hide-sm">Large-scale</a>
       <a href="#about" class="hide-sm">About</a>
       <a href="#commissions">Commissions</a>
       <a href="#contact" class="hide-sm">Contact</a>
@@ -203,17 +205,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="hero">
     <div class="wrap">
       <div>
-        <div class="eyebrow">Sculpture Studio · Austin, Texas</div>
+        <div class="eyebrow">Austin, Texas</div>
         <h1>Sculpture &amp; portraits,<br>in <em>any medium.</em></h1>
-        <p class="lead">I carve marble and stone by hand, shape wood, and scan and 3D print. Portrait busts, functional art, and one-of-a-kind commissions, made in whatever medium suits the piece.</p>
+        <p class="lead">I make sculpture in whatever medium suits the piece: marble and stone, wood, steel, copper, and 3D printing. Portrait busts, large-scale community art, and one-of-a-kind commissions.</p>
         <div class="ctas">
           <a class="btn" href="#work">View the work</a>
           <a class="btn ghost" href="#commissions">Commission a piece</a>
         </div>
       </div>
       <figure>
-        <img src="img/display-sm.webp" srcset="img/display-sm.webp 441w, img/display.webp 990w" sizes="(max-width:860px) 92vw, 520px" alt="Marble bust 'Kataluna' displayed atop a tall tower of stacked books, with a Yule Marble skull bookend and an Ocean Jasper skull bookend set into the stack" width="441" height="800">
-        <figcaption>Exhibition display — a collection of works.</figcaption>
+        <img src="img/kataluna-2-sm.webp" srcset="img/kataluna-2-sm.webp 600w, img/kataluna-2.webp 1350w" sizes="(max-width:860px) 92vw, 520px" alt="Yule Marble portrait bust 'Kataluna' of a smiling woman with braided hair, three-quarter view, with an agate cabochon set into her carved necklace" width="600" height="800">
+        <figcaption>Kataluna, Yule Marble portrait bust.</figcaption>
       </figure>
     </div>
   </div>
@@ -276,6 +278,42 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     </div>
   </section>
 
+  <section id="large">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <div class="eyebrow">Large-Scale Work</div>
+          <h2>Built With Community</h2>
+        </div>
+        <p>Two large structures, each built by volunteer crews with the community shaping the design in open meetings. Tap any image to see more.</p>
+      </div>
+      <div class="works four two">
+        <article class="work reveal">
+          <button class="thumb" data-gallery="clock" aria-label="Open Resolution Clock photo gallery">
+            <img src="img/lg-clock-1-sm.webp" alt="Aerial view of the carved wooden Resolution Clock tower at Auditorium Shores with the Austin skyline behind it and visitors around its base" loading="lazy" width="640" height="800">
+            <span class="count">3 photos</span>
+          </button>
+          <div class="body">
+            <span class="status private">First Night Austin 2008</span>
+            <h3>Resolution Clock</h3>
+            <p>Lead carpenter for Community Art Makers on a working clock tower at Auditorium Shores, burned that night to ring in the new year.</p>
+          </div>
+        </article>
+        <article class="work reveal">
+          <button class="thumb" data-gallery="wizard" aria-label="Open Magical Thinking photo gallery">
+            <img src="img/lg-wizard-1-sm.webp" alt="The Wizard effigy, a giant wooden head with a pointed hat, with visitors standing on its top deck" loading="lazy" width="640" height="800">
+            <span class="count">2 photos</span>
+          </button>
+          <div class="body">
+            <span class="status private">Burning Flipside 2015</span>
+            <h3>Magical Thinking</h3>
+            <p>The Wizard. I designed it and led construction as Design and Fabrication Team lead, with a volunteer crew.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section id="range">
     <div class="wrap">
       <div class="sec-head reveal">
@@ -283,20 +321,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <div class="eyebrow">Beyond Stone</div>
           <h2>Commissioned Work</h2>
         </div>
-        <p>A selection of private commissions: scanned, printed, painted, and carved in wood. Tap any image to see more.</p>
+        <p>A selection of private commissions, scanned and 3D printed. Tap any image to see more.</p>
       </div>
-      <div class="works four">
-        <article class="work reveal">
-          <button class="thumb" data-gallery="balloon" aria-label="Open balloon dog photo">
-            <img src="img/balloon-dog-1-sm.webp" alt="Glossy violet balloon-dog sculpture" loading="lazy" width="640" height="800">
-          </button>
-          <div class="body">
-            <span class="status private">Private commission</span>
-            <h3>Balloon Dog</h3>
-            <div class="medium">3D printed · Hand painted</div>
-            <p>A playful balloon-dog sculpture, 3D printed and hand-painted in glossy violet for a private client.</p>
-          </div>
-        </article>
+      <div class="works four two">
         <article class="work reveal">
           <button class="thumb" data-gallery="busts" aria-label="Open portrait bust photos">
             <img src="img/kevin-bust-1-sm.webp" alt="White 3D-printed portrait bust of a smiling man" loading="lazy" width="640" height="800">
@@ -321,17 +348,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             <p>Gold award statuettes topped with the client's own scanned likeness, made as one-of-a-kind gifts.</p>
           </div>
         </article>
-        <article class="work reveal">
-          <button class="thumb" data-gallery="shoe" aria-label="Open shoe-cleaning stand photo">
-            <img src="img/shoe-stand-1-sm.webp" alt="Carved shoe-cleaning stand in walnut, eucalyptus and rosewood, with a small bee inlay" loading="lazy" width="640" height="800">
-          </button>
-          <div class="body">
-            <span class="status private">Private commission</span>
-            <h3>Shoe-Cleaning Stand</h3>
-            <div class="medium">Walnut, eucalyptus &amp; rosewood · Hand carved</div>
-            <p>A child's shoe-cleaning stand carved in walnut, eucalyptus, and rosewood for a Montessori teacher's classroom, finished with a small bee inlay.</p>
-          </div>
-        </article>
       </div>
     </div>
   </section>
@@ -339,14 +355,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <section id="about">
     <div class="wrap about">
       <figure class="reveal">
-        <img src="img/artist-sm.webp" alt="Herbu in the studio, grinning beside a skull named Igor" loading="lazy" width="800" height="747">
-        <figcaption>In the studio with my assistant Igor.</figcaption>
+        <img src="img/artist-sm.webp" srcset="img/artist-sm.webp 600w, img/artist.webp 1200w" sizes="(max-width:860px) 92vw, 480px" alt="Herbu in the studio in a white protective suit, safety glasses and a respirator with pink filter cartridges" loading="lazy" width="600" height="800">
+        <figcaption>In the studio.</figcaption>
       </figure>
       <div class="reveal">
-        <div class="eyebrow">The Artist</div>
-        <h2>Why “Herbu”?</h2>
-        <p>I'm <strong>Kaleb Allen</strong>, a sculptor in Austin, Texas. I sign my work <strong>Herbu</strong> because my raison d'être calls me “Boo”. I'm her Boo, so I'm Herbu.</p>
-        <p>I work in whatever material a piece calls for: marble and stone carved by hand, hardwoods for functional pieces, and 3D scanning and printing for portraits and gifts. Every piece is one of a kind.</p>
+        <h2>Who's Herbu?</h2>
+        <p>A sculptor in Austin, Texas. My raison d'être calls me “Boo”, so I'm Herbu.</p>
+        <p>I work in whatever material a piece calls for: Wood, steel, copper, marble and stone formed by hand. Every piece is one of a kind.</p>
+        <p>I primarily focused on temporal art for many years. You had to be there.</p>
+        <p>Recently I've taken to the opposite with pieces that will last for generations.</p>
         <div class="loc">◆ Based in Austin, Texas · local pickup available</div>
       </div>
     </div>
@@ -454,15 +471,15 @@ const G = {
   kataluna: {t:"Kataluna — Yule Marble", n:["kataluna-1","kataluna-2","kataluna-3","kataluna-4","kataluna-5","kataluna-6"]},
   marble:   {t:"Marble Skull Bookend", n:["marble-skull-3","marble-skull-1","marble-skull-2","marble-skull-4"]},
   jasper:   {t:"Ocean Jasper Skull Bookend", n:["jasper-skull-1","jasper-skull-2","jasper-skull-3","jasper-skull-4"]},
-  balloon:  {t:"Balloon Dog — 3D printed, hand painted", n:["balloon-dog-1"]},
+  clock:    {t:"Resolution Clock — First Night Austin, New Year's Eve 2008", c:"Photos: Ira Weinschel; crew portrait: Steven Noreyko", n:["lg-clock-1","lg-clock-2","lg-clock-3"]},
+  wizard:   {t:"Magical Thinking (The Wizard) — Burning Flipside 2015", n:["lg-wizard-1","lg-wizard-2"]},
   busts:    {t:"Portrait Busts — 3D scanned & printed", n:["kevin-bust-1","kevin-bust-2"]},
   awards:   {t:"Custom Award Statuettes", n:["award-1","award-2"]},
-  shoe:     {t:"Shoe-Cleaning Stand — walnut, eucalyptus & rosewood", n:["shoe-stand-1"]},
   process:  {t:"The Process", n:["process-1","process-2","process-3","process-4","process-5","process-6"]}
 };
 const lb=document.querySelector('.lb'), im=lb.querySelector('img'), cap=lb.querySelector('.cap');
 let cur=null, i=0, last=null;
-function show(){ const g=G[cur]; im.src='img/'+g.n[i]+'.webp'; im.alt=g.t+' — photo '+(i+1); cap.textContent=g.t+'   ·   '+(i+1)+' / '+g.n.length;
+function show(){ const g=G[cur]; im.src='img/'+g.n[i]+'.webp'; im.alt=g.t+' — photo '+(i+1); cap.textContent=g.t+'   ·   '+(i+1)+' / '+g.n.length+(g.c?'   ·   '+g.c:'');
   const nx=new Image(); nx.src='img/'+g.n[(i+1)%g.n.length]+'.webp'; }
 function open(g,k){ cur=g; i=k||0; last=document.activeElement; lb.classList.add('open'); document.body.style.overflow='hidden'; show(); lb.querySelector('.x').focus(); }
 function close(){ lb.classList.remove('open'); document.body.style.overflow=''; im.src=''; if(last) last.focus(); }
